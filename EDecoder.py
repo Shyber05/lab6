@@ -1,5 +1,4 @@
-
-# Brandon Scheiber 
+# Brandon Scheiber & Muhammad Ali
 # COP3502
 
 def prompt(): 
@@ -27,22 +26,28 @@ def encode():
 
 def decode(n_password):
     '''decodes password'''
-    pass
+
+    new_password = ''.join([str(num) for num in n_password])
+    old_password = ''.join([str(int(num) - 3) for num in n_password])
+    
+
+    print(f'The encoded password is {new_password}, and the original password is {old_password}.')
+    return old_password
     
 
 
 def main():
-    user_input = prompt()
-    if user_input == "1":
-        n_password = encode()
-        # print(str(n_password))  #For testing
+    while True:
+        user_input = prompt()
+        if user_input == "1":
+            n_password = encode()
+            # print(str(n_password))  #For testing
 
-    elif user_input == "2":
-        #decode(n_password)
-        pass
+        elif user_input == "2":
+            decode(n_password)
 
-    else: #quit
-        pass
+        else: #quit
+            break
 
 
 
