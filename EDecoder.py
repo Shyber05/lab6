@@ -12,6 +12,7 @@ def prompt():
 
     user_input = input("Please enter an option: ")
     return user_input
+    #hello
 
 def encode():
     '''8-digit integer --> list of number '''
